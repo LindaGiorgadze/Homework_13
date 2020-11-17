@@ -8,6 +8,7 @@ header {
     background-image: url(/images/header.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    margin-bottom: $size008;
     nav {
         display: flex;
         justify-content: space-between;
@@ -56,6 +57,62 @@ header {
             .mini-menu-li:last-child {
                 padding-left: $size1;
             }
+        }
+    }
+}
+.container {
+    @extend %container;
+    h3 {
+        @extend %title1;
+        font-weight: bold;
+    }
+    h4 {
+        font-family: $font1;
+        font-size: $size3;
+        font-weight: bolder;
+        padding: $size0013 0;
+        max-width: 374px;
+        margin-bottom: $size004;
+    }
+    .boxes {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        article {
+            display: flex;
+            flex-grow: 2;
+            margin-bottom: $size002;
+            img {
+                max-width: $object1;
+                max-height: $object2;
+                width: 100%;
+                object-fit: cover;
+            }
+            .article-text {
+                background-color: $color5;
+                padding: $size009 $size002;
+                h5 {
+                    @extend %title1;
+                    font-weight: bold;
+                    padding: $size0013 0;
+                }
+                h6 {
+                    @include font ($font1, $size4, $color3);
+                    font-weight: bolder;
+                    padding: $size0013 0;
+                }
+                p{
+                    @include font ($font1, $size2, $color4);
+                    max-width: 260px;
+                    padding: $size0013 0;
+                }
+            }
+            .arrow {
+                background-color: $color1;
+                border: none;
+                width: 60px;
+            }
+
         }
     }
 }
