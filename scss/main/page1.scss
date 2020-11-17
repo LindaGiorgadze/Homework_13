@@ -1,0 +1,61 @@
+@import '../modules/variables.scss';
+@import '../modules/classes.scss';
+@import '../modules/mixins.scss';
+@import '../basic/fonts.scss';
+
+header {
+    @extend %container;
+    background-image: url(/images/header.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    nav {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: $size006;
+        .logo {
+            @include font ($font1, $size1, $color2);
+            font-weight: bold;
+        }
+        .menu {
+            .menu-li {
+                display: inline-block;
+                margin-left: $size004;
+                a {
+                    @include font ($font1, $size2, $color2);
+                }
+                svg {
+                    width: 6.94px;
+                    height: 3.47px;
+                    margin-left: 2px;
+                    path {
+                        stroke: $color2;
+                    }
+                }
+            }
+        }
+    }
+    .mini-nav {
+        h2 {
+            @include font ($font1, $size3, $color2);
+            font-weight: bolder;
+            padding: $size001 0;
+            margin-bottom: $size001;
+        }
+        .mini-menu {
+            .mini-menu-li{
+                display: inline-block;
+                padding: 0 $size0013;
+                a {
+                    @include font ($font1, $size1, $color2);
+                }
+            }
+            .mini-menu-li:first-child {
+                border-right: 2px solid $color2;
+                padding-right: $size1;
+            }
+            .mini-menu-li:last-child {
+                padding-left: $size1;
+            }
+        }
+    }
+}
