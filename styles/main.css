@@ -106,7 +106,7 @@ header, .container {
   font-display: swap; }
 
 header {
-  background-image: url(/images/header.jpg);
+  background-image: url(../images/header.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   margin-bottom: 90px; }
