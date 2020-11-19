@@ -61,58 +61,207 @@ header {
     }
 }
 .container {
-    @extend %container;
-    h3 {
-        @extend %title1;
-        font-weight: bold;
-    }
-    h4 {
-        font-family: $font1;
-        font-size: $size3;
-        font-weight: bolder;
-        padding: $size0013 0;
-        max-width: 374px;
-        margin-bottom: $size004;
-    }
-    .boxes {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        article {
+    width: 100%;
+    .about {
+        @extend %container;
+        margin-bottom: 70px;;
+        h3 {
+            @extend %title1;
+            font-weight: bold;
+        }
+        h4 {
+            font-family: $font1;
+            font-size: $size3;
+            font-weight: bolder;
+            padding: $size0013 0;
+            max-width: 374px;
+            margin-bottom: $size004;
+        }
+        .boxes {
             display: flex;
-            flex-grow: 2;
-            margin-bottom: $size002;
-            img {
-                max-width: $object1;
-                max-height: $object2;
-                width: 100%;
-                object-fit: cover;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            article {
+                display: flex;
+                flex-grow: 2;
+                margin-bottom: $size002;
+                img {
+                    max-width: $object1;
+                    max-height: $object2;
+                    width: 100%;
+                    object-fit: cover;
+                }
+                .article-text {
+                    background-color: $color5;
+                    padding: $size009 $size002;
+                    h5 {
+                        @extend %title1;
+                        font-weight: bold;
+                        padding: $size0013 0;
+                    }
+                    h6 {
+                        @include font ($font1, $size4, $color3);
+                        font-weight: bolder;
+                        padding: $size0013 0;
+                    }
+                    p{
+                        @include font ($font1, $size2, $color4);
+                        max-width: 260px;
+                        padding: $size0013 0;
+                    }
+                }
+                .arrow {
+                    background-color: $color1;
+                    border: none;
+                    width: 60px;
+                }
+    
             }
-            .article-text {
-                background-color: $color5;
-                padding: $size009 $size002;
-                h5 {
-                    @extend %title1;
-                    font-weight: bold;
+        }
+    }
+    .booking-container {
+        background-color: $color5;
+        .booking-box {
+            @extend %container;
+            padding-top: 53px;
+            padding-bottom: 54px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            align-items: flex-end;
+            .input-div {
+                display: flex;
+                flex-flow: column;
+                label {
+                    @include font ($font1, $size5, $color1);
+                    margin-bottom: $size0013;
                     padding: $size0013 0;
                 }
-                h6 {
-                    @include font ($font1, $size4, $color3);
-                    font-weight: bolder;
-                    padding: $size0013 0;
-                }
-                p{
-                    @include font ($font1, $size2, $color4);
-                    max-width: 260px;
-                    padding: $size0013 0;
+                input {
+                    width: 260px;
+                    height: 60px;
+                    padding: $size002;
+                    @include font ($font1, $size5, $color6);
+                    border: 2px solid #EBEBEB;
                 }
             }
-            .arrow {
+            .submit {
                 background-color: $color1;
+                width: 260px;
+                height: 60px;
                 border: none;
-                width: 60px;
+                @include font ($font1, $size5, $color2);
+                font-weight: bold;
+                svg {
+                    vertical-align: middle;
+                    color: $color2;
+                }
             }
-
+        }
+    }
+}
+footer {
+    background-color: $color3;
+    width: 100%;
+    .footer-content {
+        @extend %container;
+        padding-top: $size008;
+        padding-bottom: $size009;
+        .main-footer {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: $size0011;
+            .footer-about {
+                h1 {
+                    @include font ($font1, $size6, $color2);
+                    margin-bottom: 20px;
+                    padding: $size0013 0;
+                    font-weight: bold;
+                }
+                p {
+                    @include font ($font1, $size1, $color4);
+                    max-width: 260px;
+                    line-height: 21px;
+                    padding: $size0013 0;
+                    margin-bottom: 20px;
+                }
+                .social-icons {
+                    img {
+                        max-width: 35px;
+                        max-height: 35px;
+                        width: 100%;
+                        object-fit: contain;
+                        margin-right: 10px;
+                    }
+                }
+            }
+            .footer-nav {
+                display: contents;
+                .useful {
+                    h3 {
+                        @include font ($font1, $size4, $color2);
+                        font-weight: bold;
+                        padding: $size0013 0;
+                        margin-bottom: 20px;
+                    }
+                    ul {
+                        li {
+                            padding-bottom: 10px;
+                            a {
+                                @include font ($font1, $size1, $color1);
+                            }
+                        }
+                    }
+                }
+                .privacy {
+                    h3 {
+                        @include font ($font1, $size4, $color2);
+                        font-weight: bold;
+                        padding: $size0013 0;
+                        margin-bottom: 20px;
+                    }
+                    ul {
+                        li {
+                            padding-bottom: 10px;
+                            a {
+                                @include font ($font1, $size1, $color1);
+                            }
+                        }
+                    }
+                }
+                .contact {
+                    h3 {
+                        @include font ($font1, $size4, $color2);
+                        font-weight: bold;
+                        padding: $size0013 0;
+                        margin-bottom: 20px;
+                    }
+                    .infos {
+                        div {
+                            padding-bottom: 23px;
+                            svg {
+                                vertical-align: middle;
+                                color: $color1;
+                            }
+                            a {
+                                @include font ($font1, $size1, $color2);
+                                margin-left: $size002;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .editor {
+            display: flex;
+            justify-content: space-between;
+            p {
+                @include font ($font1, $size1, $color4);
+                display: inline-block;
+            }
+            a {
+                @include font ($font1, $size1, $color1);
+            }
         }
     }
 }

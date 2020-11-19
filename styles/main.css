@@ -49,12 +49,12 @@ a {
   src: url("../fonts/Poppins-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Poppins-Regular.woff2") format("woff2"), url("../fonts/Poppins-Regular.woff") format("woff"), url("../fonts/Poppins-Regular.ttf") format("truetype"), url("../fonts/Poppins-Regular.svg#Poppins-Regular") format("svg");
   font-display: swap; }
 
-header, .container {
+header, .container .about, .container .booking-container .booking-box, footer .footer-content {
   max-width: 1366px;
   margin: 0 auto;
   padding: 30px 139px; }
 
-.container h3, .container .boxes article .article-text h5 {
+.container .about h3, .container .about .boxes article .article-text h5 {
   font-family: "Poppins";
   font-size: 14px;
   color: #5863F8; }
@@ -83,12 +83,12 @@ header, .container {
   src: url("../fonts/Poppins-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Poppins-Regular.woff2") format("woff2"), url("../fonts/Poppins-Regular.woff") format("woff"), url("../fonts/Poppins-Regular.ttf") format("truetype"), url("../fonts/Poppins-Regular.svg#Poppins-Regular") format("svg");
   font-display: swap; }
 
-header, .container {
+header, .container .about, .container .booking-container .booking-box, footer .footer-content {
   max-width: 1366px;
   margin: 0 auto;
   padding: 30px 139px; }
 
-.container h3, .container .boxes article .article-text h5 {
+.container .about h3, .container .about .boxes article .article-text h5 {
   font-family: "Poppins";
   font-size: 14px;
   color: #5863F8; }
@@ -152,49 +152,178 @@ header {
   header .mini-nav .mini-menu .mini-menu-li:last-child {
     padding-left: 14px; }
 
-.container h3 {
-  font-weight: bold; }
-
-.container h4 {
-  font-family: "Poppins";
-  font-size: 42px;
-  font-weight: bolder;
-  padding: 5px 0;
-  max-width: 374px;
-  margin-bottom: 50px; }
-
-.container .boxes {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap; }
-  .container .boxes article {
-    display: flex;
-    flex-grow: 2;
-    margin-bottom: 17px; }
-    .container .boxes article img {
-      max-width: 168px;
-      max-height: 190px;
-      width: 100%;
-      object-fit: cover; }
-    .container .boxes article .article-text {
-      background-color: #F8F8F8;
-      padding: 35px 17px; }
-      .container .boxes article .article-text h5 {
-        font-weight: bold;
-        padding: 5px 0; }
-      .container .boxes article .article-text h6 {
+.container {
+  width: 100%; }
+  .container .about {
+    margin-bottom: 70px; }
+    .container .about h3 {
+      font-weight: bold; }
+    .container .about h4 {
+      font-family: "Poppins";
+      font-size: 42px;
+      font-weight: bolder;
+      padding: 5px 0;
+      max-width: 374px;
+      margin-bottom: 50px; }
+    .container .about .boxes {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap; }
+      .container .about .boxes article {
+        display: flex;
+        flex-grow: 2;
+        margin-bottom: 17px; }
+        .container .about .boxes article img {
+          max-width: 168px;
+          max-height: 190px;
+          width: 100%;
+          object-fit: cover; }
+        .container .about .boxes article .article-text {
+          background-color: #F8F8F8;
+          padding: 35px 17px; }
+          .container .about .boxes article .article-text h5 {
+            font-weight: bold;
+            padding: 5px 0; }
+          .container .about .boxes article .article-text h6 {
+            font-family: "Poppins";
+            font-size: 18px;
+            color: #000000;
+            font-weight: bolder;
+            padding: 5px 0; }
+          .container .about .boxes article .article-text p {
+            font-family: "Poppins";
+            font-size: 12px;
+            color: #B1B1B1;
+            max-width: 260px;
+            padding: 5px 0; }
+        .container .about .boxes article .arrow {
+          background-color: #5863F8;
+          border: none;
+          width: 60px; }
+  .container .booking-container {
+    background-color: #F8F8F8; }
+    .container .booking-container .booking-box {
+      padding-top: 53px;
+      padding-bottom: 54px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      align-items: flex-end; }
+      .container .booking-container .booking-box .input-div {
+        display: flex;
+        flex-flow: column; }
+        .container .booking-container .booking-box .input-div label {
+          font-family: "Poppins";
+          font-size: 13px;
+          color: #5863F8;
+          margin-bottom: 5px;
+          padding: 5px 0; }
+        .container .booking-container .booking-box .input-div input {
+          width: 260px;
+          height: 60px;
+          padding: 17px;
+          font-family: "Poppins";
+          font-size: 13px;
+          color: #CECECE;
+          border: 2px solid #EBEBEB; }
+      .container .booking-container .booking-box .submit {
+        background-color: #5863F8;
+        width: 260px;
+        height: 60px;
+        border: none;
         font-family: "Poppins";
-        font-size: 18px;
-        color: #000000;
-        font-weight: bolder;
-        padding: 5px 0; }
-      .container .boxes article .article-text p {
+        font-size: 13px;
+        color: #FFFFFF;
+        font-weight: bold; }
+        .container .booking-container .booking-box .submit svg {
+          vertical-align: middle;
+          color: #FFFFFF; }
+
+footer {
+  background-color: #000000;
+  width: 100%; }
+  footer .footer-content {
+    padding-top: 90px;
+    padding-bottom: 35px; }
+    footer .footer-content .main-footer {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 54px; }
+      footer .footer-content .main-footer .footer-about h1 {
         font-family: "Poppins";
-        font-size: 12px;
+        font-size: 24px;
+        color: #FFFFFF;
+        margin-bottom: 20px;
+        padding: 5px 0;
+        font-weight: bold; }
+      footer .footer-content .main-footer .footer-about p {
+        font-family: "Poppins";
+        font-size: 14px;
         color: #B1B1B1;
         max-width: 260px;
-        padding: 5px 0; }
-    .container .boxes article .arrow {
-      background-color: #5863F8;
-      border: none;
-      width: 60px; }
+        line-height: 21px;
+        padding: 5px 0;
+        margin-bottom: 20px; }
+      footer .footer-content .main-footer .footer-about .social-icons img {
+        max-width: 35px;
+        max-height: 35px;
+        width: 100%;
+        object-fit: contain;
+        margin-right: 10px; }
+      footer .footer-content .main-footer .footer-nav {
+        display: contents; }
+        footer .footer-content .main-footer .footer-nav .useful h3 {
+          font-family: "Poppins";
+          font-size: 18px;
+          color: #FFFFFF;
+          font-weight: bold;
+          padding: 5px 0;
+          margin-bottom: 20px; }
+        footer .footer-content .main-footer .footer-nav .useful ul li {
+          padding-bottom: 10px; }
+          footer .footer-content .main-footer .footer-nav .useful ul li a {
+            font-family: "Poppins";
+            font-size: 14px;
+            color: #5863F8; }
+        footer .footer-content .main-footer .footer-nav .privacy h3 {
+          font-family: "Poppins";
+          font-size: 18px;
+          color: #FFFFFF;
+          font-weight: bold;
+          padding: 5px 0;
+          margin-bottom: 20px; }
+        footer .footer-content .main-footer .footer-nav .privacy ul li {
+          padding-bottom: 10px; }
+          footer .footer-content .main-footer .footer-nav .privacy ul li a {
+            font-family: "Poppins";
+            font-size: 14px;
+            color: #5863F8; }
+        footer .footer-content .main-footer .footer-nav .contact h3 {
+          font-family: "Poppins";
+          font-size: 18px;
+          color: #FFFFFF;
+          font-weight: bold;
+          padding: 5px 0;
+          margin-bottom: 20px; }
+        footer .footer-content .main-footer .footer-nav .contact .infos div {
+          padding-bottom: 23px; }
+          footer .footer-content .main-footer .footer-nav .contact .infos div svg {
+            vertical-align: middle;
+            color: #5863F8; }
+          footer .footer-content .main-footer .footer-nav .contact .infos div a {
+            font-family: "Poppins";
+            font-size: 14px;
+            color: #FFFFFF;
+            margin-left: 17px; }
+    footer .footer-content .editor {
+      display: flex;
+      justify-content: space-between; }
+      footer .footer-content .editor p {
+        font-family: "Poppins";
+        font-size: 14px;
+        color: #B1B1B1;
+        display: inline-block; }
+      footer .footer-content .editor a {
+        font-family: "Poppins";
+        font-size: 14px;
+        color: #5863F8; }
